@@ -42,7 +42,7 @@ print("\nWriting DataFrame out to CSV directory...")
 # dont do coalese if the dataset is large, it can lead to performance issues.
 # Instead, write the DataFrame in its default partitioned format or specify a reasonable number of partitions based on the size of the data.
 # df_combined.coalesce(1).write.mode("overwrite").option("header", "true").csv("data\\output_data")
-df_combined.write.mode("overwrite").option("header", "true").csv("data\\output_data")
+df_combined.write.mode("overwrite").option("header", "true").csv("data_output_data")
 
 
 time.sleep(50)

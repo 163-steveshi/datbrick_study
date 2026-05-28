@@ -1,5 +1,5 @@
 import os
-from pyspark.sql import SparkSession, DataFrame
+from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, IntegerType, StringType
 
 spark = SparkSession.builder.appName("read_csv").getOrCreate()
@@ -25,3 +25,5 @@ df_combined = df.unionByName(df_new_data)
 df_combined.show()
 
 df_combined.select("NAME").show()
+
+spark.stop()
