@@ -1,6 +1,10 @@
 data/
 spark-env/
 data_output_data/
+spark_try/spark-warehouse/
 output_csv
 .env
-spark_try/spark-warehouse
+gcp_key.json
+spark-warehouse/
+metastore_db/
+derby.log

@@ -42,16 +42,16 @@ spark = (
 # hadoop_conf.set("fs.s3a.threads.max", "20")
 
 
-# schema = StructType(
-#     [
-#         StructField("ID", IntegerType(), True),
-#         StructField("AGE", IntegerType(), True),
-#         StructField("NAME", StringType(), True),
-#     ]
-# )
+schema = StructType(
+    [
+        StructField("ID", IntegerType(), True),
+        StructField("AGE", IntegerType(), True),
+        StructField("NAME", StringType(), True),
+    ]
+)
 
-# df = spark.read.schema(schema).csv(f"{S3_BUCKET_PATH}/customer_test.csv", header=True)
-# df.show()
+df = spark.read.schema(schema).csv(f"{S3_BUCKET_PATH}/customer_test.csv", header=True)
+df.show()
 
 
 # df = spark.read.parquet(f"{S3_BUCKET_PATH}/parquet_order/parquet_json_200/")
