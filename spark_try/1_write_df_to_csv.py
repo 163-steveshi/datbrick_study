@@ -25,5 +25,9 @@ df_combined = df.unionByName(df_new_data)
 df_combined.show()
 
 df_combined.select("NAME").show()
+path = os.path.abspath("data\\output_data")
+
+df_combined.write.mode("overwrite").option("header", "true").csv(path)
+
 
 spark.stop()

@@ -2,3 +2,5 @@ data/
 spark-env/
 data_output_data/
 output_csv
+.env
+spark_try/spark-warehouse
